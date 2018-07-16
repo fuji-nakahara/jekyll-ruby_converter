@@ -1,18 +1,16 @@
 # Jekyll::RubyConverter
 
-This is the Jekyll plugin that adds {ruby|ルビ} syntax support 
+This is the Jekyll plugin that adds {ruby|ルビ} syntax support.
 
 ## Installation
 
-Add the following to your Jekyll project's Gemfile:
+Add this line to your Jekyll project's Gemfile:
 
 ```ruby
-group :jekyll_plugins do
-  gem 'jekyll-ruby_converter'
-end
+gem 'jekyll-ruby_converter'
 ```
 
-And add it to your `_config.yml` plugins:
+Also add the following to your `_config.yml`:
 
 ```yaml
 plugins:
