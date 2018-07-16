@@ -16,7 +16,7 @@ And add it to your `_config.yml` plugins:
 
 ```yaml
 plugins:
-  - jekyll-ruby_converter
+  - jekyll/ruby_converter
 ```
 
 ## Usage

@@ -9,9 +9,9 @@ module Jekyll
       RUBY_PATTERN =
         %r(
           {
-          (?<kanji>[^%]?[^{}|]*)
+          (?<kanji>[^{}|]*)
           \|
-          (?<kana>[^{}]*[^%]?)
+          (?<kana>[^{}]*)
           }
         )x
 
@@ -23,7 +23,7 @@ module Jekyll
       end
 
       def convert(content)
-        content.gsub!(RUBY_PATTERN) do |match|
+        content.gsub(RUBY_PATTERN) do |match|
           kanji, *kanas = match.slice(1...-1).split('|')
           return "<ruby>#{kanji}<rt></rt></ruby>" if kanas.empty?
 
