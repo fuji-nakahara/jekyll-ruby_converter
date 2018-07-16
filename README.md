@@ -1,28 +1,30 @@
 # Jekyll::RubyConverter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/jekyll/ruby_converter`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This is the Jekyll plugin that adds {ruby|ルビ} syntax support 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add the following to your Jekyll project's Gemfile:
 
 ```ruby
-gem 'jekyll-ruby_converter'
+group :jekyll_plugins do
+  gem 'jekyll-ruby_converter'
+end
 ```
 
-And then execute:
+And add it to your `_config.yml` plugins:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install jekyll-ruby_converter
+```yaml
+plugins:
+  - jekyll-ruby_converter
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Write ruby with following syntax in Markdown files, then they will be converted to HTML `<ruby>` tags:
+
+- `{漢字|かんじ}`  => `<ruby>漢字<rt>かんじ</rt></ruby>`
+- `{漢字|かん|じ}` => `<ruby>漢<rt>かん</rt>字<rt>じ</rt></ruby>`
 
 ## Development
 
@@ -32,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/jekyll-ruby_converter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/fuji-nakahara/jekyll-ruby_converter. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
